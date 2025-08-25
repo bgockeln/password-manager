@@ -1,0 +1,56 @@
+### Visualization of how the master password, salt, and derived key flow in the program ###
+
+User enters master password
+            │
+            ▼
+      +-------------+
+      | Master PW   |
+      +-------------+
+            │
+            │ +----------------+
+            │ | Generate random |  ← salt (16 bytes)
+            │ | salt            |
+            │ +----------------+
+            ▼
+   PBKDF2HMAC Key Derivation
+            │
+            ▼
+     +-----------------+
+     | Derived Key (32 bytes)
+     +-----------------+
+            │
+            │ Stored on disk as:
+            │ [ salt ][ derived key ]
+            ▼
+        master.key file
+
+
+### Verification flow ###
+
+User enters master password
+            │
+            ▼
+   Read master.key file
+      ┌───────────────┐
+      │ Extract salt  │ (first 16 bytes)
+      │ Extract key   │ (remaining bytes)
+      └───────────────┘
+            │
+PBKDF2HMAC Key Derivation (with extracted salt)
+            │
+            ▼
+Compare newly derived key with stored key
+            │
+  ┌─────────┴─────────┐
+  │ Keys match?       │
+  │   Yes → login OK  │
+  │   No  → try again │
+  └───────────────────┘
+
+### Key points from the diagram ###
+
+1. Salt is stored with the key → needed to derive the same key later.
+
+2. Random salt ensures uniqueness → same password gives different keys each time.
+
+3. Key derivation uses PBKDF2HMAC → hashes password + salt with many iterations for security.
