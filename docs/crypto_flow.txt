@@ -1,4 +1,4 @@
-### Visualization of how the master password, salt, and derived key flow in the program ###
+Visualization of how the master password, salt, and derived key flow in the program 
 
 User enters master password
             │
@@ -47,7 +47,7 @@ Compare newly derived key with stored key
   │   No  → try again │
   └───────────────────┘
 
-### Key points from the diagram ###
+Key points from the diagram 
 
 1. Salt is stored with the key → needed to derive the same key later.
 
