@@ -1,2 +1,4 @@
 **/master.key
 **/passwords.dat
+.venv/
+__pycache__/
