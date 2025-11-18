@@ -1,6 +1,7 @@
 # Ben's Password Manager
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-finished-brightgreen)
 
 For German version of this README, see [README_DE.md](README_DE.md)
 

@@ -1,6 +1,7 @@
 # Bens Passwort-Manager
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-finished-brightgreen)
 
 Dies ist ein einfacher Passwort-Manager, den ich erstellt habe, um Erfahrung mit Verschlüsselung zu sammeln. Er verwendet die Python `cryptography` Bibliothek: `Fernet` für das Verschlüsseln/Entschlüsseln von Passwörtern und `hazmat` für die Erstellung eines sicheren Master-Passwort.
 
