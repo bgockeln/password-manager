@@ -1,4 +1,7 @@
 # Ben's Password Manager
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+
 For German version of this README, see [README_DE.md](README_DE.md)
 
 I wanted to gain experience with encryption, so I created a very simple password manager that uses Python's `cryptography` library. `Fernet` is used to encrypt and decrypt passwords, and `hazmat` is used to derive a strong master password key.
